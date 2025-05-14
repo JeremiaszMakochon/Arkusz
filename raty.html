@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursy komputerowe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> <img src="klawiatura.jpg" alt="kursy komputerowe"> </header>
+    <header id="menu">
+    <a href="index.html">Strona główna</a>
+    <a href="raty.html">Koszt rat</a>
+    <a href="https://moje-szkolenia.pl/">Nasz partner</a>
+    </header>
+    <main>
+    <h3>Oblicz miesięczną ratę</h3>
+    <input id='kurs_react' type="checkbox" value="Kurs React.js"> <a>Kurs React Js</a>
+    <input id='kurs_java' type="checkbox" value="JavaScript"> <a>Kurs JavaScript</a> <br>
+    <a>liczba rat: </a>
+    <input id="liczba_rat" type="number"> <br>
+    <select id="ktore_miasto">
+    <option value="Warszawa">Warszawa</option>
+    <option value="Katowice">Katowice</option>
+    <option value="Gdansk">Gdańsk</option>
+    </select> <br>
+    <input type="submit" value="oblicz" onclick="oblicz()"/>
+        <script>
+        function oblicz()
+        {
+            if (kurs_react.checked) {
+                var kurs_react_wartosc = 5000
+            }
+            else {
+                var kurs_react_wartosc = 0
+            }
+            if (kurs_java.checked) {
+                var kurs_java_wartosc = 5000
+            }
+            else {
+                var kurs_java_wartosc = 0
+            }
+            var raty = document.getElementById('liczba_rat').value
+            if (isNaN(liczba_rat))
+            {
+            document.getElementById('output').innerHTML = "musisz wybrać ilość rat"
+            }
+            var miasto = document.getElementById('ktore_miasto').value
+
+           document.getElementById('output').innerHTML =
+            "Kurs odbędzie się w "+miasto+" Koszt całkowity: "+
+            (kurs_java_wartosc+kurs_react_wartosc)+
+            " Płacisz "+raty+" po "+(kurs_java_wartosc+kurs_react_wartosc)/raty
+
+        }
+    </script>
+    <div id="output"></div>
+        
+    </main>
+    <footer>Autor strony: Jeremiasz Makochoń</footer>
+</body>
+</html>

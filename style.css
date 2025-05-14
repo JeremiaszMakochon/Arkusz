@@ -1,0 +1,9 @@
+body {font-family: Helvetica; background-color: #EAEAEA;}
+header {background-color: #625B5B; color: white; padding: 20px; text-align: center;}
+footer {background-color: #625B5B; color: white; padding: 20px; text-align: center;}
+img {width: 100%;}
+table {border: #625B5B dashed 1px; width: 60%; margin-left: 40px; text-align: center;}
+input {margin: 5px;}
+#menu a:link {font-style: bold; background-color: #EAEAEA; color: #625B5B;
+     padding: 10px; margin: 50px; border-radius: 20px}
+#menu a:link:hover {background-color:  #625B5B; border: solid #EAEAEA; color: #EAEAEA;}
